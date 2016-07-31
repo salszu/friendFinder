@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>friendFinderSurvey</title>
+	<meta charset="UTF-8">
+    <title>Friend Finder - Survey</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+
+	   html,
+	    body {
+	        background-image: url(http://wall.wallrage.com/wp-content/uploads/Forest-Desktop-Backgrounds-HD.jpg);
+	        position: fixed;
+	        height: 100%;
+	        width: 100%;
+	        background-color: #666666;
+	        background-repeat: no-repeat;
+	        background-attachment: fixed;
+	        background-size: cover;
+   			}
+   		.one {
+   			color: 999999;
+   		}
+
+    </style>
+</head>
+<body>
+	<h3 class="one">Question 1</h3>
+        <h4>Do you enjoy sitting at home or exploring the world?</h4>
+        <select class="select" id="q1">
+            <option value="" disabled selected>Select an Option</option>
+            <option value="1">1 (Homebody)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (World Traveler)</option>
+        </select>
+        <h3 class="one">Question 2</h3>
+        <h4>Do you enjoy the classics or embrace the modern?</h4>
+        <select class="select" id="q2">
+            <option value="" disabled selected>Select an Option</option>
+            <option value="1">1 (Classic)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Modern)</option>
+        </select>
+        <h3 class="one">Question 3</h3>
+        <h4>Do you enjoy being out in nature?</h4>
+        <select class="select" id="q3">
+            <option value="" disabled selected>Select an Option</option>
+            <option value="1">1 (No)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Yes)</option>
+        </select>
+        <h3 class="one">Question 4</h3>
+        <h4>Are you a motivated person?</h4>
+        <select class="select" id="q4">
+            <option value="" disabled selected>Select an Option</option>
+            <option value="1">1 (No)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Yes)</option>
+        </select>
+        <h3 class="one">Question 5</h3>
+        <h4>Do you enjoy the holidays?</h4>
+        <select class="select" id="q5">
+            <option value="" disabled selected>Select an Option</option>
+            <option value="1">1 (No)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Yes)</option>
+        </select>
+        <h3 class="one">Question 6</h3>
+        <h4>Do you remember your dreams?</h4>
+        <select class="select" id="q6">
+            <option value="" disabled selected>Select an Option</option>
+            <option value="1">1 (No)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Always)</option>
+        </select>
+        <h3 class="one">Question 7</h3>
+        <h4>Fruits or vegetables?</h4>
+        <select class="select" id="q7">
+            <option value="" disabled selected>Select an Option</option>
+            <option value="1">1 (Fruits)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (Veggies)</option>
+        </select>
+        <h3 class="one">Question 8</h3>
+        <h4>Are you scared of the ocean?</h4>
+        <select class="select" id="q8">
+            <option value="" disabled selected>Select an Option</option>
+            <option value="1">1 (No)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (OMG help)</option>
+        </select>
+        <h3 class="one">Question 9</h3>
+        <h4>Chocolate or vanilla?</h4>
+        <select class="select" id="q9">
+            <option value="" disabled selected>Select an Option</option>
+            <option value="1">1 (choco)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (vanilla)</option>
+        </select>
+        <h3 class="one">Question 10</h3>
+        <h4>Do you understand modern art?</h4>
+        <select class="select" id="q10">
+            <option value="" disabled selected>Select an Option</option>
+            <option value="1">1 (wtf is this)</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5 (the social commentary through the juxtaposition of the clean and dirty of this picture of a broken toilet really rings loudly with my sensibilities)</option>
+        </select>
+        <!--
+        <script type="text/javascript">
+         $("#submit").on("click", function() {
+        // Form validation
+        function validateForm() {
+            var isValid = true;
+            $('.form-control').each(function() {
+                if ($(this).val() === '')
+                    isValid = false;
+            });
+            $('.select').each(function() {
+                if ($(this).val() === null)
+                    isValid = false
+            })
+            return isValid;
+        }
+        // If all required fields are filled
+        if (validateForm() == true) {
+            // Create scores array
+            var q = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
+            var scores = [];
+            for (var i in q) {
+                var val = $('#q' + q[i]).val();
+                scores.push(val)
+            }
+            // Create an object for the user's data
+            var userData = {
+                name: $("#name").val(),
+                photo: $("#photo").val(),
+                location: $("#location").val(),
+                email: $('#email').val(),
+                scores: scores
+            }
+            // Grab the URL of the website
+            var currentURL = window.location.origin;
+            // AJAX post the data to the friends API. 
+            $.post(currentURL + "/api/friends", userData, function(data) {
+                // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                $('#matchName').text(data.name);
+                $('#matchLocation').text(data.location);
+                $('#matchEmail').text(data.email);
+                $('#matchImg').attr("src", data.photo);
+                // Show the modal with the best match 
+                $("#resultsModal").modal('toggle');
+            });
+        } else {
+            alert("Please fill out all fields before submitting!");
+        }
+        return false;
+    });
+    </script>
+        -->
+</body>
+</html>
+
